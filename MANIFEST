@@ -1,0 +1,13 @@
+Changes
+Faster.xs
+gzip-faster-perl.c
+lib/Gzip/Faster.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+ppport.h
+README
+t/gzip-faster.t
+typemap
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
