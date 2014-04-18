@@ -6,7 +6,7 @@
               |_|                                       
 
 
-This is the README for Gzip::Faster version 0.01.
+This is the README for Gzip::Faster version 0.02.
 
 Gzip::Faster is a "module" for the Perl computer programming language, a
 library of computer code to install on a computer.  This document contains four
@@ -26,8 +26,8 @@ sections:
 
 Gzip::Faster - gzip and gunzip, without the fuss
 
-This is just like all those other modules which gzip and gunzip
-things, except not nearly as complicated.
+This module compresses data to the gzip format and decompresses it
+from the format.
 
 -----------------------------------------------------------------------------
 
@@ -59,11 +59,11 @@ If you have the App::cpanminus installer, you may prefer
 
     cpanm Gzip::Faster
 
-To install the module from the source file, Gzip-Faster-0.01.tar.gz, follow
+To install the module from the source file, Gzip-Faster-0.02.tar.gz, follow
 this sequence of commands:
 
-    tar xfz Gzip-Faster-0.01.tar.gz
-    cd Gzip-Faster-0.01
+    tar xfz Gzip-Faster-0.02.tar.gz
+    cd Gzip-Faster-0.02
     perl Makefile.PL
     make
     make install
@@ -88,6 +88,6 @@ repository on github at
 
 -----------------------------------------------------------------------------
 
-This README was written on Fri Apr 18 10:00:14 2014.
+This README was written on Fri Apr 18 14:50:09 2014.
 
 -----------------------------------------------------------------------------
