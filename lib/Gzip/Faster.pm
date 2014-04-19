@@ -28,7 +28,15 @@ Compress C<$stuff>.
     my $stuff = gunzip ($zipped);
 
 Uncompress C<$zipped>. This will cause a fatal error if C<$zipped> is
-not compressed.
+not compressed, or if it is not a complete object.
+
+=head2 gzip_file
+
+    my $zipped = gzip_file ('file');
+
+=head2 gunzip_file
+
+    my $stuff = gunzip_file ('file.gz');
 
 =head1 PERFORMANCE
 
@@ -69,6 +77,10 @@ I used trips a browser bug in the Firefox web browser where it
 produces a content encoding error message. Thus this functionality is
 disabled.
 
+This module is for on-the-fly compressing of web page output. Thus,
+there is no incremental parsing, and no handling of
+deflate/inflate.
+
 =head1 AUTHOR, COPYRIGHT AND LICENCE
 
 Ben Bullock <bkb@cpan.org>. Copyright (C) 2014 Ben Bullock. This
@@ -80,11 +92,30 @@ Perl itself.
 package Gzip::Faster;
 require Exporter;
 @ISA = qw(Exporter);
-@EXPORT = qw/gzip gunzip/;
+@EXPORT = qw/gzip gunzip gzip_file gunzip_file/;
 use warnings;
 use strict;
 use Carp;
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 require XSLoader;
 XSLoader::load ('Gzip::Faster', $VERSION);
+
+sub gzip_file
+{
+    my ($file) = @_;
+    open my $in, "<:raw", $file or croak "Error opening '$file': $!";
+    local $/;
+    my $plain = <$in>;
+    return gzip ($plain);
+}
+
+sub gunzip_file
+{
+    my ($file) = @_;
+    open my $in, "<:raw", $file or croak "Error opening '$file': $!";
+    local $/;
+    my $zipped = <$in>;
+    return gunzip ($zipped);
+}
+
 1;
