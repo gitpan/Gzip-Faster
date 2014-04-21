@@ -1,9 +1,14 @@
 Changes
 examples/benchmark.pl
+examples/do_nothing
+examples/load_io_comp_gzip
+examples/load_io_gzip_faster
+examples/load_io_uncomp_gunzip
 Faster.xs
 gzip-faster-perl.c
 inc/Devel/CheckLib.pm
 lib/Gzip/Faster.pm
+lib/Gzip/Faster.pod
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
