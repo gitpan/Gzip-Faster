@@ -10,6 +10,7 @@ MANIFEST.SKIP
 ppport.h
 README
 t/gzip-faster.t
+t/index.html.gz
 xt/distro.t
 xt/system-gzip.t
 META.yml                                 Module YAML meta-data (added by MakeMaker)
