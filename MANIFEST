@@ -2,8 +2,9 @@ Changes
 examples/benchmark.pl
 examples/benchmarks.output
 examples/do_nothing
+examples/load_comp_raw_zlib
+examples/load_gzip_faster
 examples/load_io_comp_gzip
-examples/load_io_gzip_faster
 examples/load_io_uncomp_gunzip
 examples/synopsis.pl
 Faster.xs
