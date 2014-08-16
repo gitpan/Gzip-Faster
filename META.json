@@ -36,7 +36,7 @@
          }
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/benkasminbullock/gzip-faster/issues"
@@ -47,5 +47,5 @@
          "web" : "https://github.com/benkasminbullock/gzip-faster"
       }
    },
-   "version" : "0.08_01"
+   "version" : "0.09"
 }
