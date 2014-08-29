@@ -18,8 +18,8 @@ no_index:
     - t
     - inc
 requires:
-  perl: 5.006001
+  perl: 5.008001
 resources:
   bugtracker: https://github.com/benkasminbullock/gzip-faster/issues
   repository: git://github.com/benkasminbullock/gzip-faster.git
-version: 0.09
+version: 0.10
